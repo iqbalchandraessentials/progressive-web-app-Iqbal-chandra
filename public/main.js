@@ -1,0 +1,40 @@
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/serviceWorker.js")
+    .then(function (registration) {
+      console.log("Registration successful, scope is:", registration.scope);
+    })
+    .catch(function (error) {
+      console.log("Service worker registration failed, error:", error);
+    });
+}
+
+// "shortcuts": [
+//     {
+//       "name": "How's weather today?",
+//       "short_name": "Today",
+//       "description": "View weather information for today",
+//       "url": "/today?source=pwa",
+//       "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+//     },
+//     {
+//       "name": "How's weather tomorrow?",
+//       "short_name": "Tomorrow",
+//       "description": "View weather information for tomorrow",
+//       "url": "/tomorrow?source=pwa",
+//       "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+//     }
+//   ],
+//   "description": "Weather forecast information",
+//   "screenshots": [
+//     {
+//       "src": "/images/screenshot1.png",
+//       "type": "image/png",
+//       "sizes": "540x720"
+//     },
+//     {
+//       "src": "/images/screenshot2.jpg",
+//       "type": "image/jpg",
+//       "sizes": "540x720"
+//     }
+//   ]
