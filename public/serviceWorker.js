@@ -1,5 +1,11 @@
 var CACHE_NAME = "essentials-cache";
-var urlsToCache = ["/", "/index.html", "/offline.html"];
+var urlsToCache = [
+  "/",
+  "/index.html",
+  "/offline.html",
+  "/style/main.css",
+  "/script/navbar-scroll.js",
+];
 
 self.addEventListener("install", function (event) {
   // Perform install steps
@@ -51,21 +57,5 @@ self.addEventListener("fetch", function (event) {
         // fallbacks, depending on URL and headers.
         // Eg, a fallback silhouette image for avatars.
       })
-  );
-});
-
-self.addEventListener("activate", function (event) {
-  var cacheAllowlist = CACHE_NAME;
-
-  event.waitUntil(
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(
-        cacheNames.map(function (cacheName) {
-          if (cacheAllowlist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
   );
 });

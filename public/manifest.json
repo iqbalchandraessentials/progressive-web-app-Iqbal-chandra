@@ -1,6 +1,7 @@
 {
-  "short_name": "essentials",
-  "name": "Iqbal Chandra Dewangga",
+  "name": "Essentials",
+  "short_name": "Essentials",
+  "description": "A readable Hacker News app.",
   "icons": [
     {
       "src": "/images/icons-192.png",
@@ -14,9 +15,9 @@
     }
   ],
   "start_url": "/index.html",
-  "background_color": "#3367D6",
-  "display": "standalone",
   "scope": "/",
+  "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#3367D6"
+  "theme_color": "#233b69",
+  "background_color": "red"
 }
